@@ -1,8 +1,21 @@
-.Map {
-    height: 500px;
-    width: 550px;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.leaflet-container {
-    overflow: unset;
+.App header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+}
+
+.Map {
+  height: 595px;
+  width: 620px;
 }
