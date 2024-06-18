@@ -34,6 +34,11 @@
       "name": "Wall",
       "position": [69, 35],
       "description": "The guarding wall stands as a monolithic barrier, its ancient stones worn smooth by the passage of countless years. Moss and lichen creep over its surface, and twisted vines snake their way up to the battlements, giving it the appearance of a living entity. Arrow slits and guard towers punctuate the expanse, where shadows flicker and watchful eyes might still be hiding. The gatehouse, an imposing structure with rusted portcullis and heavy, weather-beaten doors, creaks eerily in the wind. The path along the wall is silent, save for the occasional flutter of a bird disturbed from its roost, and the distant murmur of the sea, a reminder of the isolation beyond."
+    },
+    {
+      "name": "TEST",
+      "position": [200, 200],
+      "description": "TEST"
     }
   ]
 }

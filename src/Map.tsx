@@ -2,7 +2,7 @@ import './App.css';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { LatLngExpression, Icon } from 'leaflet';
+import { LatLngExpression, Icon, LatLngBoundsExpression } from 'leaflet';
 import flag from './assets/images/flag.png';
 import locationData from './locations.json';
 
@@ -13,10 +13,14 @@ interface Location {
 }
 
 export const Map = () => {
-  const zoom: number = 0;
-  const center: LatLngExpression = [0, 0];
-  const minZoom: number = 0;
+  const zoom: number = 1;
+  const center: LatLngExpression = [1, 1];
+  const minZoom: number = 1;
   const maxZoom: number = 2;
+  const bounds: LatLngBoundsExpression = [
+    [-100, 0],
+    [81, 30],
+  ];
 
   //showMarkers - information from store
   const [showMarkers, setShowMarkers] = useState(true);
@@ -30,8 +34,8 @@ export const Map = () => {
 
   return (
     <div>
-      <MapContainer className="Map" center={center} zoom={zoom} scrollWheelZoom={true} minZoom={minZoom} maxZoom={maxZoom}>
-        <TileLayer url="../map/{z}/{x}/{y}.jpg" />
+      <MapContainer className="Map" center={center} zoom={zoom} scrollWheelZoom={true} minZoom={minZoom} maxZoom={maxZoom} bounds={bounds}>
+        <TileLayer url="../map/{z}/{x}/{y}.jpg" noWrap={true} />
         {showMarkers
           ? locations.map((location: Location) => (
               <Marker key={location.name} position={location.position as LatLngExpression} icon={icon}>
