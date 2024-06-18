@@ -13,9 +13,9 @@ interface Location {
 }
 
 export const Map = () => {
-  const zoom: number = 2;
-  const center: LatLngExpression = [1, 1];
-  const minZoom: number = 1;
+  const zoom: number = 0;
+  const center: LatLngExpression = [0, 0];
+  const minZoom: number = 0;
   const maxZoom: number = 2;
 
   //showMarkers - information from store
