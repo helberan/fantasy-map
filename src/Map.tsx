@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { LatLngExpression, Icon } from 'leaflet';
 import flag from './assets/images/flag.png';
+import locationData from './locations.json';
 
-interface MapMarker {
-  position: LatLngExpression;
-  text: string;
+interface Location {
+  name: string;
+  position: number[];
+  description: string;
 }
 
 export const Map = () => {
@@ -16,6 +18,7 @@ export const Map = () => {
   const minZoom: number = 1;
   const maxZoom: number = 2;
 
+  //showMarkers - information from store
   const [showMarkers, setShowMarkers] = useState(true);
 
   const icon = new Icon({
@@ -23,28 +26,22 @@ export const Map = () => {
     iconSize: [43, 43],
   });
 
-  const markers: MapMarker[] = [
-    { position: [2, 6], text: 'Maják' },
-    { position: [15, -35], text: 'Město' },
-    { position: [-40, 25], text: 'Santa Maria' },
-    { position: [81, 30], text: 'Severní přístav' },
-    { position: [-40, 110], text: 'Město 2' },
-    { position: [-45, -85], text: 'Jezero' },
-  ];
+  const locations = locationData.locations;
 
   return (
     <div>
       <MapContainer className="Map" center={center} zoom={zoom} scrollWheelZoom={true} minZoom={minZoom} maxZoom={maxZoom}>
         <TileLayer url="../map/{z}/{x}/{y}.jpg" />
         {showMarkers
-          ? markers.map((marker, idx) => {
-              console.log(marker.text, marker.position);
-              return (
-                <Marker key={idx} position={marker.position as LatLngExpression} icon={icon}>
-                  <Popup>{marker.text}</Popup>
-                </Marker>
-              );
-            })
+          ? locations.map((location: Location) => (
+              <Marker key={location.name} position={location.position as LatLngExpression} icon={icon}>
+                <Popup>
+                  <h2>{location.name}</h2>
+                  <p>{location.description}</p>
+                  <button>Enter</button>
+                </Popup>
+              </Marker>
+            ))
           : null}
       </MapContainer>
     </div>
