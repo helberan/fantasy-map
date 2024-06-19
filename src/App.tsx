@@ -1,21 +1,28 @@
 import './App.css';
-import { Map } from './Map';
-import { Filter } from './Filter';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Menu } from './components/Menu';
+import { Map } from './pages/map/Map';
+import { Location } from './pages/locations/Location';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>Map</h1>
-        <Filter />
-      </header>
-      <div className="content-container">
-        <Map />
-        <div>
-          <p>Detail</p>
+    <Router>
+      <div className="App">
+        <Menu />
+        <div className="Main">
+          <Routes>
+            <Route path="/" element={<Map />}></Route>
+            <Route path="/location/:id" element={<Location />}></Route>
+            <Route path="/location/:id" element={<Location />}></Route>
+            <Route path="/location/:id" element={<Location />}></Route>
+            <Route path="/location/:id" element={<Location />}></Route>
+            <Route path="/location/:id" element={<Location />}></Route>
+            <Route path="/location/:id" element={<Location />}></Route>
+            <Route path="/location/:id" element={<Location />}></Route>
+          </Routes>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

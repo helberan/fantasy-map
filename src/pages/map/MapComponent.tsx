@@ -1,18 +1,19 @@
-import './App.css';
 import 'leaflet/dist/leaflet.css';
 import { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { LatLngExpression, Icon, LatLngBoundsExpression } from 'leaflet';
-import flag from './assets/images/flag.png';
-import locationData from './locations.json';
+import { Link, useParams } from 'react-router-dom';
+import flag from '../../assets/images/flag.png';
+import locationData from '../../locations.json';
 
 interface Location {
+  id: string;
   name: string;
   position: number[];
   description: string;
 }
 
-export const Map = () => {
+export const MapComponent = () => {
   const zoom: number = 1;
   const center: LatLngExpression = [1, 1];
   const minZoom: number = 1;
@@ -42,7 +43,7 @@ export const Map = () => {
                 <Popup>
                   <h2>{location.name}</h2>
                   <p>{location.description}</p>
-                  <button>Enter</button>
+                  <Link to={`/location/${location.id}`}>Enter</Link>
                 </Popup>
               </Marker>
             ))

@@ -1,44 +1,54 @@
 {
   "locations": [
     {
+      "id": "lighthouse",
       "name": "Lighthouse",
       "position": [2, 6],
-      "description": "Perched on the jagged cliffs, the old lighthouse stands sentinel against the restless sea. Its beam, long extinguished, now casts eerie shadows in the moonlight. The walls, streaked with salt and moss, seem to whisper ancient secrets, while the constant wail of the wind through broken windows speaks of sailors lost to the abyss."
+      "description": "Perched on the jagged cliffs, the old lighthouse stands sentinel against the restless sea. Its beam, long extinguished, now casts eerie shadows in the moonlight. The walls, streaked with salt and moss, seem to whisper ancient secrets, while the constant wail of the wind through broken windows speaks of sailors lost to the abyss.",
+      "clue": "In the lighthouse keeper's journal, you find an entry: 'Strange lights over the fortress... could it be related to the disappearances?'"
     },
     {
+      "id": "fortress",
       "name": "Fortress",
       "position": [15, -35],
-      "description": "This stronghold looms ominously amid barren fields, its ancient stone walls scarred by time and conflict. The imposing gates, always slightly ajar, groan with the weight of forgotten centuries. A few dilapidated houses dot the landscape, their windows dark and empty, seeming to watch the fortress with unblinking eyes. Inside, narrow cobblestone streets wind through shadowed alleys, leading to a central courtyard where the air is thick with an unsettling silence. Whispers of past battles and unseen watchers seem to linger in every corner, making the hairs on the back of your neck stand on end."
+      "description": "This stronghold looms ominously amid barren fields, its ancient stone walls scarred by time and conflict. The imposing gates, always slightly ajar, groan with the weight of forgotten centuries. Inside, narrow cobblestone streets wind through shadowed alleys, leading to a central courtyard where the air is thick with an unsettling silence.",
+      "clue": "Hidden in the courtyard, you find a soldier's letter mentioning a 'secret experiment' at the shipwreck."
     },
     {
+      "id": "shipwreck",
       "name": "Shipwreck",
       "position": [-40, 25],
-      "description": "Marooned on a jagged rock in the midst of the sea, the two ships appear locked in a perpetual struggle, their broken masts and torn sails reaching skyward like the arms of drowning giants. The sea foams and churns around them, as if trying to reclaim its prey. Rusting metal and splintered wood intertwine, forming a chaotic, eerie silhouette against the horizon. The haunting cries of seabirds and the relentless roar of the waves create a symphony of despair, while the occasional flicker of phosphorescent marine life hints at the mysteries lurking in the depths below."
+      "description": "Marooned on a jagged rock in the midst of the sea, the two ships appear locked in a perpetual struggle, their broken masts and torn sails reaching skyward like the arms of drowning giants. The sea foams and churns around them, as if trying to reclaim its prey.",
+      "clue": "You discover a crate of strange equipment with a map pointing to the northern harbour."
     },
     {
+      "id": "northern-harbour",
       "name": "Northern Harbour",
       "position": [81, 30],
-      "description": "The harbour, once bustling with life, now lies in ruin. Rotting piers stretch like skeletal fingers into dark, brackish waters, where ghostly shapes flicker just beneath the surface. Abandoned boats, their hulls scarred and barnacle-encrusted, sway gently with the tide, as if longing for the days when they ruled the waves."
+      "description": "The harbour, once bustling with life, now lies in ruin. Rotting piers stretch like skeletal fingers into dark, brackish waters, where ghostly shapes flicker just beneath the surface.",
+      "path": "/northern-harbour",
+      "clue": "An old fisherman's net contains a diary entry: 'People are disappearing... heading towards the town. We must find out why.'"
     },
     {
+      "id": "town",
       "name": "Town",
       "position": [-40, 110],
-      "description": " At the heart of the island lies the main town, a place where time seems to have faltered. Ivy-covered buildings and cobblestone streets lead to a grand square, dominated by a statue of a forgotten hero. At dusk, the town is cloaked in an unnatural twilight, and the air hums with a palpable sense of foreboding, as if the past is always just a step behind."
+      "description": "At the heart of the island lies the main town, a place where time seems to have faltered. Ivy-covered buildings and cobblestone streets lead to a grand square, dominated by a statue of a forgotten hero. At dusk, the town is cloaked in an unnatural twilight.",
+      "clue": "Inside the town hall, you find a proclamation about evacuations and a reference to the lake being a 'safe zone.'"
     },
     {
+      "id": "lake",
       "name": "Lake",
       "position": [-45, -85],
-      "description": "Hidden deep within the island's forest, the lake is a mirror of obsidian glass. Its surface remains eerily still, reflecting the twisted trees and the sky's perpetual overcast gloom. Local legends speak of spirits that dwell in its depths, and at night, strange lights can be seen dancing just below the water's surface, luring the unwary into its inky embrace."
+      "description": "Hidden deep within the island's forest, the lake is a mirror of obsidian glass. Its surface remains eerily still, reflecting the twisted trees and the sky's perpetual overcast gloom.",
+      "clue": "Near the lake's edge, you find an old photograph of people standing in front of the wall, with a note: 'The answer lies within the wall.'"
     },
     {
+      "id": "wall",
       "name": "Wall",
       "position": [69, 35],
-      "description": "The guarding wall stands as a monolithic barrier, its ancient stones worn smooth by the passage of countless years. Moss and lichen creep over its surface, and twisted vines snake their way up to the battlements, giving it the appearance of a living entity. Arrow slits and guard towers punctuate the expanse, where shadows flicker and watchful eyes might still be hiding. The gatehouse, an imposing structure with rusted portcullis and heavy, weather-beaten doors, creaks eerily in the wind. The path along the wall is silent, save for the occasional flutter of a bird disturbed from its roost, and the distant murmur of the sea, a reminder of the isolation beyond."
-    },
-    {
-      "name": "TEST",
-      "position": [200, 200],
-      "description": "TEST"
+      "description": "The guarding wall stands as a monolithic barrier, its ancient stones worn smooth by the passage of countless years. Moss and lichen creep over its surface, and twisted vines snake their way up to the battlements.",
+      "clue": "Within a hidden compartment in the wall, you find a letter revealing the island's dark secret: the people were part of a failed experiment to create a utopia, but it went horribly wrong, leading to mass disappearances. The final lines read, 'We were never alone. They are still here, watching.'"
     }
   ]
 }
